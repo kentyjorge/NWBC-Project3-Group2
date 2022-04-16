@@ -1,33 +1,30 @@
-from email.mime import base
-from os import name
-import sqlalchemy as sa
-from sqlalchemy.ext.automap import automap_base
-from sqlalchemy.orm import Session
-from sqlalchemy import create_engine, func
-
-import numpy as np
-import pandas as pd
-import datetime as dt
-
-from flask import Flask, jsonify
-from sqlalchemy.orm.session import make_transient
-
-#################################################
-# Database Setup
-#################################################
-
-engine = sa.create_engine('postgresql://localhost:5432/group_2_project_3')
-connection = engine.connect()
-
-# reflect an existing database into a new model
-# reflect the tables
-Base = automap_base()
-Base.prepare(engine, reflect=True)
-
-park = Base.classes.parks
-webcams = Base.classes.webcams
+from flask import Flask, render_template, redirect
+import data_get
 
 #################################################
 # Flask Setup
+#4 routes - index, parks, cams, attendance
+# 
+# 
 #################################################
 app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return render_template('index.html')
+
+@app.route("/parks")
+def parks():
+    return render_template('index.html')
+
+@app.route("/webcams")
+def webcams():
+    return render_template('index.html')
+
+@app.route("/attendance")
+def attendance():
+    return render_template('visitor_plot.html')
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
