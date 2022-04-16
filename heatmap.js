@@ -1,6 +1,6 @@
 let myMap = L.map("map", {
     center: [39.8283, -98.5795],
-    zoom: 5
+    zoom: 4
   });
   
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
