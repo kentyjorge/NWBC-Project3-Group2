@@ -7,11 +7,27 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(myMap);
 
-// Will be used to build heatmap layer once data is pulled in with FLask App
-// d3.json(file).then(function(data) {
+console.log(data)
 
-//     console.log(data);
-  
+// Gets total park visitorship for heatmap, will be added to arrays of lat/lng coordinates
+parkVisitorship = []
+for (var i = 0; i < data.length; i++) {
+
+    visitorship = {}
+    let totalVisitors = (
+      data[i]["Jan"] + data[i]["Feb"] +
+      data[i]["Mar"] + data[i]["Apr"] +
+      data[i]["May"] + data[i]["Jun"] +
+      data[i]["Jul"] + data[i]["Aug"] +
+      data[i]["Sep"] + data[i]["Oct"] +
+      data[i]["Nov"] + data[i]["Dec"]      
+    );
+    
+    visitorship[data[i]["Park"]] = totalVisitors
+    parkVisitorship.push(visitorship)
+}
+
+console.log(parkVisitorship)
 //     var heatArray = [];
   
 //     for (var i = 0; i < data.length; i++) {
@@ -27,4 +43,3 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 //       blur: 35
 //     }).addTo(myMap);
   
-//   });
