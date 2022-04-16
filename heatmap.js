@@ -14,7 +14,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   
 //     var heatArray = [];
   
-//     for (var i = 0; i < response.length; i++) {
+//     for (var i = 0; i < data.length; i++) {
 //       var location = data[i].location;
   
 //       if (location) {
