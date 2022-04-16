@@ -1,18 +1,19 @@
-drop table if exists stocks cascade;
+drop table if exists parks cascade;
 CREATE TABLE parks (
     Park varchar   NOT NULL,
-    Latitude int ,
-    Longitude int ,
+    Latitude decimal(20) ,
+    Longitude decimal(20) ,
     url varchar,
     Park_Id varchar   NOT NULL,
-    Park_Code varcahr  NOT NULL,
+    Park_Code varchar  NOT NULL,
     Park_Type varchar NOT NULL,
+	image varchar,
     State varchar,
 	Coord varchar,
     Primary key (Park_Id)
 );
 
-drop table if exists articles cascade;
+drop table if exists webcams cascade;
 CREATE TABLE webcams (
     Park varchar  NOT NULL,
     Park_Code varchar NOT NULL,
