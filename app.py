@@ -13,17 +13,17 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route("/parks")
-def parks():
-    return render_template('index.html')
+#@app.route("/parks")
+#def parks():
+    #return render_template('interactive_map.html')
 
-@app.route("/webcams")
-def webcams():
-    return render_template('index.html')
+#@app.route("/webcams")
+#def webcams():
+    #return render_template('index.html')
 
-@app.route("/attendance")
-def attendance():
-    return render_template('visitor_plot.html')
+#@app.route("/attendance")
+#def attendance():
+    #return render_template('visitor_plot.html')
 
 
 if __name__ == "__main__":
