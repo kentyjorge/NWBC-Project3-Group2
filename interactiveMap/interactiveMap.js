@@ -1,6 +1,6 @@
 let myMap = L.map("map", {
     center: [39.8283, -98.5795],
-    zoom: 5
+    zoom: 4
   });
   
 L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
@@ -11,8 +11,27 @@ L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
 // d3.json(file).then(function(data) {
 
 //     console.log(data);
-  
-//     var heatArray = [];
-  
+//     markers = []
 //     for (var i = 0; i < data.length; i++) {
-//       var location = data[i].location;
+//
+//         markerHTML = "<h1 class="text-center">Park Name</h1>" + "<hr>" + 
+//                "<div class="container">" + 
+//                  "<div class="row">" +
+//                      "<div class="col-sm-6">" +
+//                          "<p>Some Park Info</p>" +
+//                          "<p>More Park Info</p>" +
+//                          "<p>More Park Info</p>" +
+//                      "</div>" +
+//                      "<div class="col-sm-6">" + 
+//                          "<a href="Park IMG Link"></a>" +
+//                      "</div>" +
+//                  "</div>" +
+//              "</div>"
+//
+//         let marker = L.marker([data.lat, data.lng], {
+//          some parameters for the marker
+//        }).bindPopup(markerHTML)
+//        markers.push(marker)
+//       }
+//
+//      
