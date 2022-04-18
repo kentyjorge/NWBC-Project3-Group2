@@ -19,6 +19,7 @@ CREATE TABLE webcams (
     Park_Code varchar NOT NULL,
     Park_Type varchar NOT NULL,
     Coord varchar,
+	Streaming varchar,
     Webcam_URL varchar,
     Images varchar,
     Information varchar,
