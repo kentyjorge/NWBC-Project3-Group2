@@ -24,7 +24,7 @@ console.log(parkCoords)
 for (var i =0; i < parkCoords.length; i++) {
   var site = parkCoords[i];
   L.marker(site.coords)
-    .bindPopup(`<h1>${site.name}</h1>`)
+    .bindPopup(`<h1>${parkCoords[i]['name']}</h1>`)
     .addTo(myMap);
 }
 
