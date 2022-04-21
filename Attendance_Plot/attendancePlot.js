@@ -48,8 +48,10 @@ for (let i = 0; i < 1; i++) {
         title: `Attendance in 2021 by Month for ${parkName}.`
     };
 
+    let config = {responsive: true}
+
     // Initiate the plot
-    Plotly.newPlot("plot", plotData, layout);
+    Plotly.newPlot("plot", plotData, layout, config);
 };
 
 // When an option in the drop down is changed, call a function to refresh the plot
@@ -95,8 +97,10 @@ function parkAttendance(park) {
                 title: `Attendance in 2021 by Month for ${parkName}.`
             };
 
+            let config = {responsive: true}
+
             // Refresh the plot with the newly selected data.
-            Plotly.newPlot("plot", plotData, layout);
+            Plotly.newPlot("plot", plotData, layout, config);
         }
     }
 
