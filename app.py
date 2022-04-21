@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect
-import other.data_get as data_get
+#import other.data_get as data_get
 
 #################################################
 # Flask Setup
