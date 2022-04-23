@@ -3,6 +3,7 @@
 
 For this project, the team decided to tackle the following question:  
 "Where do we go on our family vacation?"  
+  
 ![alt text](static/images/Homepage_Image.png)
 
 ## Extract - Transformation - Load
