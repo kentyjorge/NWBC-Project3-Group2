@@ -38,6 +38,13 @@ console.log(parkCoords)
 // Gets total park visitorship for heatmap, will be added to arrays of lat/lng coordinates
 heatArray = []
 
+let maxIntensity = 0
+for (let elt of parkVisitors) {
+  if (elt['totalVisitors'] > maxIntensity) {
+    maxIntensity = elt['totalVisitors']
+  }
+}
+
 for (let elt of parkVisitors) {
   if (parkCoords[elt['park_code']]) {
     heatPoint = [parkCoords[elt['park_code']][0],
@@ -51,7 +58,10 @@ for (let elt of parkVisitors) {
 console.log(heatArray)
   
 let heat = new L.heatLayer(heatArray, {
-      radius: 20,
-      blur: 35
+    radius: 25,
+    blur: 20,
+    max: maxIntensity,
+    maxZoom: 4,
+    gradient: {0.05: 'blue', 0.4: 'lime', .8: 'red'}
   }).addTo(myMap);
   
